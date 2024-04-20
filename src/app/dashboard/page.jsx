@@ -7,6 +7,7 @@ import {
   convertEmissionsToOffsetCost,
   convertTextAndImageCallsToEmissions,
 } from "../../../scripts/emissions/emissions";
+import Loader from "../loader.jsx";
 
 export default function Page() {
   const [textCalls, setTextCalls] = useState(0);
@@ -43,9 +44,7 @@ export default function Page() {
     return (
       <div className="bg-white text-black">
         <NavLinks />
-        <div className="mt-40">
-          <h1>Loading...</h1>
-        </div>
+        <Loader />
       </div>
     );
   }
