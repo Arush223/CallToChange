@@ -5,7 +5,7 @@ const SignUpPage = () => (
   <ClerkProvider>
     <div style={styles}>
       <NavLinks />
-      <SignUp path="/auth/sign-up" routing="path" signInUrl="/auth/sign-in" />
+      <SignUp path="/auth/sign-up/[[...rest]]" routing="path" signInUrl="/auth/sign-in" />
     </div>
   </ClerkProvider>
 );
