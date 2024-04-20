@@ -15,7 +15,7 @@ export default function Page() {
   const [imageCalls, setImageCalls] = useState(0);
   const [emissions, setEmissions] = useState(0);
   const [offsetCost, setOffsetCost] = useState(0);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -64,7 +64,7 @@ export default function Page() {
     );
   } else if (!loading) {
     return (
-      <div className="">
+      <div className="text-gray">
         <NavLinks />
         <div className="mt-40 flex flex-row justify-evenly">
           <ValueCard value={textCalls} description="LLM calls" />
