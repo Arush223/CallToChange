@@ -1,13 +1,11 @@
-import { SignUp, ClerkProvider } from "@clerk/nextjs";
+import { SignUp } from "@clerk/nextjs";
 import NavLinks from "../../../nav-links"; // Adjust the path as needed
 
 const SignUpPage = () => (
-  <ClerkProvider>
     <div style={styles}>
       <NavLinks />
       <SignUp path="/auth/sign-up" routing="path" signInUrl="/auth/sign-in" />
     </div>
-  </ClerkProvider>
 );
 
 export default SignUpPage;
