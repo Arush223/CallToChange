@@ -14,17 +14,6 @@ const links = [
 const Navbar = () => {
   const pathname = usePathname();
   const [emailHandle, setEmailHandle] = useState('');
-  const { isLoaded, isSignedIn, user } = useUser();
-  
-  useEffect(() => {
-    if (isSignedIn && isLoaded) {
-      console.log("email:", user.primaryEmailAddress);
-    }
-  }, [isSignedIn, isLoaded, user]);
-
-  if (!isLoaded) {
-    return <div className='text-black'>Loading...</div>; 
-  }
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-white">
