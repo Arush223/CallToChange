@@ -72,7 +72,11 @@ export default function Page() {
             <ValueCard value={emissions} description='Tons of CO2'/>
             <ValueCard value={`$${offsetCost}`} description='Offset Cost'/>
         </div>
-      </div>
-    );
+      <div className="absolute bottom-0 left-0 p-2 text-white text-xs">
+          Copyright &copy; 2024 Team LiquidDeath. Created during LA Hacks.
+        </div>
+    </div>
+  );
   }
+      
 }
