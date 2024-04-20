@@ -17,6 +17,7 @@ export default function Page() {
   const [offsetCost, setOffsetCost] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
     async function setUserInfo() {
@@ -36,6 +37,7 @@ export default function Page() {
           setImageCalls(imageCalls);
           setEmissions(emissions);
           setOffsetCost(offsetCost);
+          setShowContent(true);
         }
       } catch (error) {
         setError("Woah. Something happened");
@@ -66,6 +68,7 @@ export default function Page() {
     return (
       <div className="text-gray">
         <NavLinks />
+        <div className="title">
         <div className="mt-40 flex flex-row justify-evenly">
           <ValueCard value={textCalls} description="LLM calls" />
           <ValueCard value={imageCalls} description="Image calls" />
@@ -80,6 +83,7 @@ export default function Page() {
             Offset Carbon
           </a>
           
+        </div>
         </div>
         <div className="absolute bottom-0 left-0 p-2 text-white text-xs">
           Copyright &copy; 2024 Team LiquidDeath. Created during LA Hacks.
