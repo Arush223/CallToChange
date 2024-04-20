@@ -13,19 +13,19 @@ function convertEnergyToEmissions(energyConsumed) {
 }
 
 export function convertEmissionsToOffsetCost(emissions) {
-  const offsetCost = costPerTonOfEmissions * emissions;
+  const offsetCost = Math.round(costPerTonOfEmissions * emissions * 100)/100;
   return offsetCost;
 }
 
 export function convertTextCallsToEmissions(textCalls) {
   const energyConsumed = averageEnergyPerTextCall * textCalls;
-  const emissions = convertEnergyToEmissions(energyConsumed);
+  const emissions = Math.round(convertEnergyToEmissions(energyConsumed) * 10000) / 10000;
   return emissions;
 }
 
 export function convertImageCallsToEmissions(imageCalls) {
   const energyConsumed = averageEnergyPerImageCall * imageCalls;
-  const emissions = convertEnergyToEmissions(energyConsumed);
+  const emissions = Math.round(convertEnergyToEmissions(energyConsumed) * 10000) / 10000;
   return emissions;
 }
 
