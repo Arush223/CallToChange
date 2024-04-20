@@ -1,5 +1,5 @@
 import { SignUp, ClerkProvider } from "@clerk/nextjs";
-import NavLinks from "../../nav-links"; // Adjust the path as needed
+import NavLinks from "../../../nav-links"; // Adjust the path as needed
 
 const SignUpPage = () => (
   <ClerkProvider>
