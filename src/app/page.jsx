@@ -6,7 +6,7 @@ import Link from 'next/link';
 function Page() {
   const [isVisible, setIsVisible] = useState(false);
   const [percentage, setPercentage] = useState(0);
-  const [showButton, setShowButton] = useState(false);
+  const [showText, setShowText] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -18,7 +18,7 @@ function Page() {
         setPercentage((prevPercentage) => prevPercentage + 1);
       } else {
         clearInterval(percentageTimer); // Stop the interval once the percentage reaches 20
-        setShowButton(true); // Show the button once the percentage reaches 20
+        setShowText(true); // Show the text once the percentage reaches 20
       }
     }, 100); // Increase slowly
 
@@ -35,13 +35,18 @@ function Page() {
         <h1 className="text-5xl font-extrabold bg-clip-text text-transparent bg-white">
           Carbon emissions are up by {percentage}%
         </h1>
-        {showButton && (
-          <div className="mt-8">
-            <Link legacyBehavior href="/about">
-              <a className="text-lg font-semibold bg-white text-black px-6 py-3 rounded hover:bg-blue-600 transition-colors duration-300">
-                Learn More
-              </a>
-            </Link>
+        {showText && (
+          <div className="mt-4 flex items-center justify-end space-x-4">
+            <p className="text-lg font-semibold underline cursor-pointer bg-transparent text-white hover:text-blue-600 transition-colors duration-300">
+              <Link legacyBehavior href="/about">
+                <a className="flex items-center space-x-2">
+                  <span>Learn More</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white hover:text-blue-600 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </Link>
+            </p>
           </div>
         )}
       </div>
