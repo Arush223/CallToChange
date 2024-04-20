@@ -1,6 +1,6 @@
 'use server'
 
-import { getUserInfo } from "../../scripts/mongo/mongo"
+import { getUserInfo } from "../../functions/mongo/mongo"
 import { currentUser } from "@clerk/nextjs/server";
 
 export async function fetchUserInfo(){

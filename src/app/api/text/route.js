@@ -1,4 +1,4 @@
-import { updateTextGenerationCalls } from "../../../../scripts/mongo/mongo";
+import { updateTextGenerationCalls } from "../../../../functions/mongo/mongo";
 
 export const dynamic = "force-dynamic";
 export async function POST(request) {
