@@ -1,5 +1,5 @@
 import React from 'react';
-import NavLinks from './nav-links';
+import NavLinks from '../nav-links';
 
 export default function Page() {
   return (
@@ -8,3 +8,4 @@ export default function Page() {
     </div>
   );
 }
+
