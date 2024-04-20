@@ -19,7 +19,7 @@ function Page() {
     }, 0);
 
     const percentageTimer = setInterval(() => {
-      if (percentageRef.current < 55) {
+      if (percentageRef.current < 58) {
         percentageRef.current += 1;
         setPercentage(percentageRef.current);
       }
@@ -27,7 +27,7 @@ function Page() {
         clearInterval(percentageTimer);
         setShowText(true);
       }
-    }, 100);
+    }, 50);
 
     return () => {
       clearTimeout(timer);
