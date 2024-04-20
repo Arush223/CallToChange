@@ -1,4 +1,4 @@
-import { updateImageGenerationCalls } from "../../../../functions/mongo/mongo";
+import { updateImageGenerationCalls } from "../../../../scripts/mongo/mongo";
 
 export const dynamic = "force-dynamic";
 export async function POST(request) {
