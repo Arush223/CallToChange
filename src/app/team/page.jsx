@@ -1,5 +1,5 @@
 import React from 'react';
-import NavLinks from '../nav-links'; // Adjust the path as needed
+import NavLinks from '../nav-links';
 
 export default function Page() {
   return (
