@@ -51,8 +51,13 @@ const Navbar = () => {
                 </Link>
               </SignedOut>
               <SignedIn>
+                <Link href="/dashboard" passHref>
+                  <span className="flex items-center text-black hover:text-blue-500 transition-colors duration-300 cursor-pointer">
+                    <span className="ml-2 hidden md:block">Dashboard</span>
+                  </span>
+                </Link>
                 <span className="flex items-center text-black font-medium">
-                  <UserButton className="ml-2" /> {/* Added margin to UserButton */}
+                  <UserButton className="ml-2" /> 
                 </span>
               </SignedIn>
             </div>
