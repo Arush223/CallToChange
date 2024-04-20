@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -17,13 +18,10 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-white">
       <div className="container mx-auto px-6 py-4">
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           <Link legacyBehavior href="/" passHref>
-            <a className="flex items-center font-bold">
-              <span className="ml-2 text-black hover:text-blue-500">Home</span>
-            </a>
+            <a className="text-black font-bold size">Carbon Offset</a>
           </Link>
-          <span className="text-black font-bold size" style={{ fontSize: '1.2rem' }}>Carbon Offset</span>
           <nav className="flex space-x-4 font-medium">
             {links.map((link) => (
               <Link legacyBehavior key={link.name} href={link.href} passHref>
