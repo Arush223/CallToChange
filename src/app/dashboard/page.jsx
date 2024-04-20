@@ -7,7 +7,7 @@ import {
   convertEmissionsToOffsetCost,
   convertTextAndImageCallsToEmissions,
 } from "../../../scripts/emissions/emissions";
-import Loader from "../loader.jsx";
+import Loader from "../../components/loader.jsx";
 
 export default function Page() {
   const [textCalls, setTextCalls] = useState(0);
