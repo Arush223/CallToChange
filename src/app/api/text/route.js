@@ -1,4 +1,4 @@
-import { updateTextCalls } from "../../../../scripts/mongo/mongo_scripts";
+import { updateTextGenerationCalls } from "../../../../scripts/mongo/mongo_scripts";
 
 export const dynamic = "force-dynamic";
 export async function POST(request) {
@@ -12,7 +12,7 @@ export async function POST(request) {
       throw new Error("Invalid email input");
     }
 
-    updateTextCalls(email);
+    updateTextGenerationCalls(email);
     
     return Response.json({ message: "Successfully logged" }, { status: 200 });
   } catch (error) {

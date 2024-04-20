@@ -1,4 +1,4 @@
-import { updateImageCalls } from "../../../../scripts/mongo/mongo_scripts";
+import { updateImageGenerationCalls } from "../../../../scripts/mongo/mongo_scripts";
 
 export const dynamic = "force-dynamic";
 export async function POST(request) {
@@ -12,7 +12,7 @@ export async function POST(request) {
       throw new Error("Invalid email input");
     }
 
-    updateImageCalls(email);
+    updateImageGenerationCalls(email);
     
     return Response.json({ message: "Successfully logged" }, { status: 200 });
   } catch (error) {
