@@ -44,6 +44,7 @@ const Navbar = () => {
                     <span className="ml-2 hidden md:block">Sign In</span>
                   </span>
                 </Link>
+              
               </SignedOut>
               <SignedIn>
                 <Link href="/dashboard" passHref>
