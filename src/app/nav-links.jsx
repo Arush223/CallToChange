@@ -44,11 +44,6 @@ const Navbar = () => {
                     <span className="ml-2 hidden md:block">Sign In</span>
                   </span>
                 </Link>
-                <Link href="/auth/sign-up" passHref>
-                  <span className="flex items-center text-black hover:text-blue-500 transition-colors duration-300 cursor-pointer">
-                    <span className="ml-2 hidden md:block">Sign Up</span>
-                  </span>
-                </Link>
               </SignedOut>
               <SignedIn>
                 <Link href="/dashboard" passHref>
