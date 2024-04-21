@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" passHref>
-            <span className="text-black font-bold size cursor-pointer">Carbon Offset</span>
+            <span className="text-black hover:text-blue-500 font-bold size cursor-pointer">Carbon Offset</span>
           </Link>
           <nav className="flex items-center space-x-4 font-medium"> {/* Adjusted flex styling here */}
             {links.map((link) => (
@@ -37,7 +37,7 @@ const Navbar = () => {
                 </span>
               </Link>
             ))}
-            <div className="flex items-center space-x-4"> {/* Wrapper for SignedOut and SignedIn */}
+            <div className="flex items-center space-x-4"> 
               <SignedOut>
                 <Link href="/auth/sign-in" passHref>
                   <span className="flex items-center text-black hover:text-blue-500 transition-colors duration-300 cursor-pointer">
