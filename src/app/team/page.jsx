@@ -16,7 +16,7 @@ export default function Page() {
             <Image src="/aarush.png" alt="aarush" width={400} height={400} />
           </div>
           <div className="flex-1 text-center">
-            <Image src="/Aditya.png" alt="Aditya" width={400} height={400} />
+            <Image src="/Aditya.png" alt="Aditya" width={400} height={400} />     
           </div>
           <div className="flex-1 text-center">
             <Image src="/Ganesh.png" alt="Ganesh" width={400} height={400} />
