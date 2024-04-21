@@ -24,12 +24,10 @@ CallToChange seamlessly integrates with custom Python libraries to analyze and c
 
 ## How we built it
 
-We developed CallToChange utilizing Next.js for the frontend, seamlessly integrating it with custom Python libraries specialized in carbon emission calculations. The core of the application employs sophisticated cost function algorithms, optimized to precisely quantify the carbon emissions associated with LLM calls. Additionally, we implemented interactive dashboards leveraging data visualization techniques to facilitate comprehensive data analysis, thereby empowering users with actionable insights for informed decision-making.
+We developed CallToChange using Next.js for the frontend, seamlessly integrating it with custom Python libraries specialized in carbon emission calculations. The core of the application employs carbon emission calculation formulas that pull data from MongoDB to precisely quantify the carbon emissions associated with LLM calls. Additionally, we implemented interactive dashboards to empower users with actionable insights for informed decision-making.
 
 ---
 
-
-
 ## Screenshots
-![image](https://github.com/Arush223/CallToChange/assets/115517528/cabedfe8-b9a7-4473-9759-b6e638612de0)
 
+![image](https://github.com/Arush223/CallToChange/assets/115517528/cabedfe8-b9a7-4473-9759-b6e638612de0)
