@@ -1,4 +1,4 @@
-# CallToChange 🌍
+# [CallToChange](https://calltochange.vercel.app/) 🌍
 
 ## Team LiquidDeath: Aarush, Aditya, Ganesh
 
