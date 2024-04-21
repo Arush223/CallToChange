@@ -26,7 +26,7 @@ CallToChange seamlessly integrates with our custom Python library (call-to-chang
 
 We developed CallToChange using Next.js and Python.
 
-Our Python library logs LLM calls in MongoDB. Under the hood, our library does this by sending a POST request to API routes in our web app.
+Our Python library logs LLM calls in MongoDB. Under the hood, our library does this by sending a POST request to API routes in our web app. These API routes securely handle data updates in MongoDB.
 
 In our web app, we use Next.js and MongoDB to fetch user information (such as the number of times a user has used text generation). To create an interactive interface, we utilized Tailwind CSS. For user authentication, we used Clerk to manage user accounts.
 
