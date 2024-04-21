@@ -13,37 +13,30 @@ function Page() {
   const [loading , setLoading] = useState(false);
   const percentageRef = useRef(0);
 
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 0);
 
     const percentageTimer = setInterval(() => {
-      if (percentageRef.current < 58) {
+      if (percentageRef.current < 58 ) {
         percentageRef.current += 1;
-        setPercentage(percentageRef.current);
+        setPercentage(percentageRef.current); 
       }
       else {
         clearInterval(percentageTimer);
         setShowText(true);
       }
     }, 50);
-
     return () => {
       clearTimeout(timer);
       clearInterval(percentageTimer);
     };
-  }, []); 
+    }, []); 
 
 
-  if(loading) {
-    return (
-      <div className="bg-black text-white">
-        <NavLinks />
-        <Loader />
-      </div>
-    );
-  }
+   
 
   return (
     <div className="relative h-screen bg-black overflow-hidden">
@@ -52,22 +45,19 @@ function Page() {
         <h1 className={`text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 title overflow-visible text-center`}>
           Over {percentage}% of companies use LLMs.  
         </h1>
-        {showText && (
-          <div className="mt-5 ">
-            <p className={`text-lg font-semibold text text-white subtitle text-center`}>
+          <div className="mt-5">
+            <p className={`text-center p-2 text-lg font-semibold text-white animate-slide-up-2  ${showText ? 'opacity-100 transition-opacity duration-2000 delay-1500' : 'opacity-0'}`}>
               <Link href="/about">
-                <span className="flex items-center  space-x-1">
-                  <span className="opacity-100 transition-opacity duration-1000 delay-1500 hover:text-blue-800 ">
-                    Let's talk about the environmental cost.
-                  </span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white hover:text-blue-800 transition-colors duration-300 " fill="none" viewBox="0 0 20 20" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
+              <span className="text-underline">
+                Let's talk about the environmental cost
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-300 hover:text-green-400 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
               </Link>
             </p>
           </div>
-        )}
+      
 
         <div className="mt-16 flex flex-row items-center justify-center space-x-8 ">
           <div className="flex flex-col items-center space-y-4">

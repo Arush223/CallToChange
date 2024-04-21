@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" passHref>
-            <span className="text-black hover:text-blue-500 font-bold size cursor-pointer">Carbon Offset</span>
+            <span className="text-black hover:text-blue-500 font-bold size cursor-pointer">CallToChange</span>
           </Link>
           <nav className="flex items-center space-x-4 font-medium">
             {links.map((link) => (
