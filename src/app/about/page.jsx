@@ -47,7 +47,7 @@ export default function Page() {
         <h1 className="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 title overflow-visible p-2">
           <span className="inline-block align-middle">CallToChange</span>
         </h1>
-        <p className={`text-center text-lg font-semibold text-white animate-slide-up ${showText ? 'opacity-100 transition-opacity duration-2000 delay-1500' : 'opacity-0'}`}>
+        <p className={`text-center p-2 text-lg font-semibold text-white animate-slide-up ${showText ? 'opacity-100 transition-opacity duration-2000 delay-1500' : 'opacity-0'}`}>
             A Python-based Carbon Emission Calculator for a company's LLM calls.
         </p>
         <div className="w-full max-w-2xl">
