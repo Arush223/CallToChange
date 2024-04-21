@@ -27,16 +27,17 @@ export default function Page() {
 
   const sections = [
     {
-      title: 'Python Library Integration',
-      content: 'Our tool seamlessly integrates with custom Python libraries to analyze and calculate LLM call emissions.',
+      title: 'Our Python Package',
+      content: 'Our Python package call-to-change helps you log text and image generation calls. For more info, check out the repo: ',
+      link: 'https://github.com/adityakakarla/call-to-change'
     },
     {
-      title: 'Cost Function Algorithm',
-      content: 'We utilize advanced cost function algorithms to accurately determine the carbon footprint of each LLM call.',
+      title: 'Emissions Calculators',
+      content: 'We calculate emissions based on the number of text generation calls and image generation calls. Using government and academic formulas, we calculate the cost to offset the emissions.',
     },
     {
-      title: 'Data Visualization',
-      content: 'Interactive dashboards provide clear visualizations of emissions data, aiding in informed decision-making.',
+      title: 'Fancy Dashboards',
+      content: 'Our dashboards show you information at every step of the process, including text generation calls, image generation calls, emissions generated, and the cost to offset emissions.',
     },
   ];
 
@@ -63,6 +64,7 @@ export default function Page() {
                     {activeSection === index && (
                       <div className="p-4 text-white">
                         {section.content}
+                        {section.link && <a href={section.link} className='text-white hover:text-blue-300 transition-colors duration-300 cursor-pointer'>{section.link}</a>}
                       </div>
                     )}
                   </li>
