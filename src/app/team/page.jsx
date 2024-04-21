@@ -1,5 +1,5 @@
 import React from 'react';
-import NavLinks from './nav-links';
+import NavLinks from '../nav-links';
 import Image from 'next/image';
 
 
