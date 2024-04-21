@@ -5,7 +5,11 @@ async function connectToCluster(uri) {
   let mongoClient;
 
   try {
-    mongoClient = new MongoClient(uri);
+    mongoClient = new MongoClient(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 45000,
+    });
     await mongoClient.connect();
     return mongoClient;
   } catch (error) {
