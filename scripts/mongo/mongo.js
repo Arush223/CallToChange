@@ -6,7 +6,9 @@ async function connectToCluster(uri) {
 
   try {
     mongoClient = new MongoClient(uri, {
-      serverSelectionTimeoutMS: 100000,
+      serverSelectionTimeoutMS: 60000,
+      connectTimeoutMS: 60000,
+      socketTimeoutMS: 60000
     });
     await mongoClient.connect();
     return mongoClient;
