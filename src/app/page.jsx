@@ -4,7 +4,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import NavLinks from './nav-links';
 import Link from 'next/link';
 import Image from 'next/image';
-import Loader from '../components/loader';
 
 function Page() {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,9 +34,6 @@ function Page() {
     };
     }, []); 
 
-
-   
-
   return (
     <div className="relative h-screen bg-black overflow-hidden">
       <NavLinks />
@@ -57,7 +53,7 @@ function Page() {
               </Link>
             </p>
           </div>
-      
+    
 
         <div className="mt-16 flex flex-row items-center justify-center space-x-8 ">
           <div className="flex flex-col items-center space-y-4">
