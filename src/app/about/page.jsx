@@ -101,32 +101,63 @@ export default function Page() {
             ))}
           </ul>
           <div className="flex justify-center mt-10 text-2xl">
-          <SignedIn>
-            <div className={`text-center p-2 text-lg font-semibold text-white `}>
-            <Link href="/dashboard" className="text-white hover:text-blue-300 transition-colors duration-300 cursor-pointer">
-              <span className="text-underline">
-                Try it out here.
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-300 hover:text-green-400 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
-            </Link>
-            </div>
-          </SignedIn>
-          <SignedOut>
-          <div className={`text-center p-2 text-lg font-semibold text-white`}>
-            <Link href="/auth/sign-up" className="text-white hover:text-blue-300 transition-colors duration-300 cursor-pointer">
-              <span className="text-underline">
-                Try it out here.
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-300 hover:text-green-400 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
-            </Link>
-            </div>
-          </SignedOut>
+            <SignedIn>
+              <div
+                className={`text-center p-2 text-lg font-semibold text-white `}
+              >
+                <Link
+                  href="/dashboard"
+                  className="text-white hover:text-blue-300 transition-colors duration-300 cursor-pointer"
+                >
+                  <span className="text-underline">
+                    Try it out here.
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 text-blue-300 hover:text-green-400 inline-block"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </span>
+                </Link>
+              </div>
+            </SignedIn>
+            <SignedOut>
+              <div
+                className={`text-center p-2 text-lg font-semibold text-white`}
+              >
+                <Link
+                  href="/auth/sign-up"
+                  className="text-white hover:text-blue-300 transition-colors duration-300 cursor-pointer"
+                >
+                  <span className="text-underline">
+                    Try it out here.
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 text-blue-300 hover:text-green-400 inline-block"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </span>
+                </Link>
+              </div>
+            </SignedOut>
           </div>
-
         </div>
       </div>
     </div>

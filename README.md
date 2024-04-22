@@ -35,5 +35,3 @@ In our web app, we use Next.js and MongoDB to fetch user information (such as th
 ## Screenshots
 
 ![image](https://github.com/Arush223/CallToChange/assets/115517528/cabedfe8-b9a7-4473-9759-b6e638612de0)
-
-

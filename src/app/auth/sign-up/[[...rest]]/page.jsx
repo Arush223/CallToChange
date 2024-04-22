@@ -2,10 +2,10 @@ import { SignUp } from "@clerk/nextjs";
 import NavLinks from "../../../nav-links"; // Adjust the path as needed
 
 const SignUpPage = () => (
-    <div style={styles}>
-      <NavLinks />
-      <SignUp path="/auth/sign-up" routing="path" signInUrl="/auth/sign-in" />
-    </div>
+  <div style={styles}>
+    <NavLinks />
+    <SignUp path="/auth/sign-up" routing="path" signInUrl="/auth/sign-in" />
+  </div>
 );
 
 export default SignUpPage;

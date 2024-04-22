@@ -8,7 +8,7 @@ async function connectToCluster(uri) {
     mongoClient = new MongoClient(uri, {
       serverSelectionTimeoutMS: 60000,
       connectTimeoutMS: 60000,
-      socketTimeoutMS: 60000
+      socketTimeoutMS: 60000,
     });
     await mongoClient.connect();
     return mongoClient;
@@ -29,7 +29,7 @@ export async function updateTextGenerationCalls(email) {
     await collection.updateOne(
       { email: email },
       { $inc: { text_count: 1, image_count: 0 } },
-      { upsert: true }
+      { upsert: true },
     );
   } catch (error) {
     throw error;
@@ -52,7 +52,7 @@ export async function updateImageGenerationCalls(email) {
     await collection.updateOne(
       { email: email },
       { $inc: { text_count: 0, image_count: 1 } },
-      { upsert: true }
+      { upsert: true },
     );
   } catch (error) {
     throw error;

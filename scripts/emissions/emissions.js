@@ -13,19 +13,21 @@ function convertEnergyToEmissions(energyConsumed) {
 }
 
 export function convertEmissionsToOffsetCost(emissions) {
-  const offsetCost = Math.round(costPerTonOfEmissions * emissions * 100)/100;
+  const offsetCost = Math.round(costPerTonOfEmissions * emissions * 100) / 100;
   return offsetCost;
 }
 
 export function convertTextCallsToEmissions(textCalls) {
   const energyConsumed = averageEnergyPerTextCall * textCalls;
-  const emissions = Math.round(convertEnergyToEmissions(energyConsumed) * 10000) / 10000;
+  const emissions =
+    Math.round(convertEnergyToEmissions(energyConsumed) * 10000) / 10000;
   return emissions;
 }
 
 export function convertImageCallsToEmissions(imageCalls) {
   const energyConsumed = averageEnergyPerImageCall * imageCalls;
-  const emissions = Math.round(convertEnergyToEmissions(energyConsumed) * 10000) / 10000;
+  const emissions =
+    Math.round(convertEnergyToEmissions(energyConsumed) * 10000) / 10000;
   return emissions;
 }
 
@@ -36,8 +38,11 @@ export function convertTextAndImageCallsToEmissions(textCalls, imageCalls) {
   return totalEmissions;
 }
 
-export function convertTextAndImageCallsToOffsetCost(textCalls, imageCalls){
-    const totalEmissions = convertTextAndImageCallsToEmissions(textCalls, imageCalls)
-    const totalOffsetCost = convertEmissionsToOffsetCost(totalEmissions)
-    return totalOffsetCost
+export function convertTextAndImageCallsToOffsetCost(textCalls, imageCalls) {
+  const totalEmissions = convertTextAndImageCallsToEmissions(
+    textCalls,
+    imageCalls,
+  );
+  const totalOffsetCost = convertEmissionsToOffsetCost(totalEmissions);
+  return totalOffsetCost;
 }

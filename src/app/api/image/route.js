@@ -13,7 +13,7 @@ export async function POST(request) {
     }
 
     updateImageGenerationCalls(email);
-    
+
     return Response.json({ message: "Successfully logged" }, { status: 200 });
   } catch (error) {
     return Response.json({ error: error.message }, { status: 400 });

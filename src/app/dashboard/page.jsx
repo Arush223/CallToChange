@@ -30,7 +30,7 @@ export default function Page() {
           const imageCalls = result.image_count;
           const emissions = convertTextAndImageCallsToEmissions(
             textCalls,
-            imageCalls
+            imageCalls,
           );
           const offsetCost = convertEmissionsToOffsetCost(emissions);
           setTextCalls(textCalls);
@@ -69,21 +69,20 @@ export default function Page() {
       <div className="text-gray">
         <NavLinks />
         <div className="title">
-        <div className="mt-40 flex flex-row justify-evenly">
-          <ValueCard value={textCalls} description="LLM calls" />
-          <ValueCard value={imageCalls} description="Image calls" />
-          <ValueCard value={emissions} description="Tons of CO2" />
-          <ValueCard value={`$${offsetCost}`} description="Offset Cost" />
-        </div>
-        <div className="mt-20 flex justify-center">
-          <a
-            href="https://cotap.org/donate/"
-            class="inline-block text-4xl font-bold text-white bg-gradient-to-r from-pink-600 to-blue-600 rounded-2xl py-3 px-5 transition ease-in-out hover:scale-110 duration-500"
-          >
-            Offset Carbon
-          </a>
-          
-        </div>
+          <div className="mt-40 flex flex-row justify-evenly">
+            <ValueCard value={textCalls} description="LLM calls" />
+            <ValueCard value={imageCalls} description="Image calls" />
+            <ValueCard value={emissions} description="Tons of CO2" />
+            <ValueCard value={`$${offsetCost}`} description="Offset Cost" />
+          </div>
+          <div className="mt-20 flex justify-center">
+            <a
+              href="https://cotap.org/donate/"
+              class="inline-block text-4xl font-bold text-white bg-gradient-to-r from-pink-600 to-blue-600 rounded-2xl py-3 px-5 transition ease-in-out hover:scale-110 duration-500"
+            >
+              Offset Carbon
+            </a>
+          </div>
         </div>
         <div className="absolute bottom-0 left-0 p-2 text-white text-xs">
           Copyright &copy; 2024 Team LiquidDeath. Created during LA Hacks.
