@@ -9,6 +9,7 @@ import {
 } from "../../../scripts/emissions/emissions";
 import Loader from "../../components/loader.jsx";
 import ValueCard from "@/components/ValueCard";
+import { SignedOut } from "@clerk/nextjs";
 
 export default function Page() {
   const [textCalls, setTextCalls] = useState(0);
@@ -69,6 +70,9 @@ export default function Page() {
       <div className="text-gray">
         <NavLinks />
         <div className="title">
+          <SignedOut>
+            <h1 className="mt-36 text-white flex justify-center text-3xl">This is what your dashboard will look like:</h1>
+          </SignedOut>
           <div className="mt-40 flex flex-row justify-evenly">
             <ValueCard value={textCalls} description="LLM calls" />
             <ValueCard value={imageCalls} description="Image calls" />
